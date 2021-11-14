@@ -1,0 +1,454 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+
+/* border-box faz contar o padding como o elemento */
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-flight:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 0;
+    background: #1D61DD;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+header {
+    height: calc(100vh - 150px);
+    /* A função  calc() CSS permite você executar cálculos quando especificar os valores de propriedades no CSS. Pode ser utilizada em qualquer lugar */
+    background: no-repeat center/cover url(../assets/header.jpg);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 30px;
+}
+
+header nav p {
+    font-weight: bold;
+    
+}
+
+header>nav>ul {
+    list-style: none;
+    display: flex;
+    /* deixar um ao lado do outro, mas fica grudado. Sendo assim, precisamos por margin */
+}
+
+header>nav>ul>li {
+    margin: auto 15px;
+    font-weight: bold;
+}
+
+.header-content {
+    max-width: 400px;
+    margin: 150px auto;
+    text-align: center;
+}
+
+.header-content h1 {
+    margin-bottom: 10px;
+    font-size: 4rem;
+}
+
+.pacotes {
+    background: #fcf8f8;
+    padding: 15px;
+}
+
+.pacotes .pacotes-cards {
+    display: flex;
+    max-width: 950px;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pacotes .pacotes-title {
+    width: 100%;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.pacotes .card {
+    width: 250px;
+    height: 350px;
+    background: white;
+    border-radius: 24px 0px;
+    margin: 25px;
+    position: relative;
+}
+
+.pacotes .card .card-tag-top {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    background: #F19839;
+    border-radius: 8px 0 0 8px;
+    padding: 5px 10px;
+}
+
+.pacotes .card .card-tag p {
+    margin: 0px;
+    font-size: .8rem;
+    color: white;
+    font-weight: bold;
+}
+
+.pacotes .card .card-tag-bottom {
+    position: absolute;
+    left: 0;
+    top: 160px;
+    background: #1D61DD;
+    border-radius: 0px 8px 8px 0px;
+    padding: 5px 10px;
+}
+
+.pacotes .card-image {
+    width: 250px;
+    height: 200px;
+    border-radius: 24px 0px 0px 0px;
+    object-fit: cover;
+}
+
+.pacotes .card-content {
+    padding: 0 15px;
+}
+
+.pacotes .card-content ul {
+    display: flex;
+    /* ficará um ao lado do outro */
+    flex-direction: column;
+    /* ficará em forma de coluna, um embaixo do outro */
+    list-style: none;
+    padding: 0px;
+    margin-top: 25px;
+}
+
+.pacotes .card-content ul li {
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    margin: 3px 0px;
+    color: rgb(90, 88, 88);
+    font-weight: bold;
+}
+
+.pacotes .card-content li svg {
+    width: 16px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.pacotes .card-content h1 {
+    font-size: 1rem;
+}
+
+.servicos {
+    padding: 15px;
+}
+
+.servicos .servicos-title {
+    text-align: center;
+    margin: 35px 0px;
+}
+
+.servicos .servicos-cards {
+    padding-top: 25px;
+    display: flex;
+    max-width: 950px;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.servicos .card {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    /* quando coloca display flex, ele cola tudo, pq o flex direction padrão é ROW, temos q por column pra virar uma coluna */
+    justify-content: center;
+    /* SEMPRE USA JUSTIFY CONTENT PARA CENTRALIZAR */
+    /* QUANDO USA FLEX DIRECTION COLUMN, TEM QUE USAR ALIGH ITENS TB */
+    align-items: center;
+    margin: 0 20px;
+}
+
+.servicos .card svg {
+    width: 60px;
+    height: 60px;
+    margin: 50px;
+    transition: all 0.6s;
+}
+
+
+/* criar efeito ao passar o mouse do icone svg */
+
+.servicos .card svg:hover {
+    stroke: #1D61DD;
+    transform: scale(1.3);
+}
+
+
+/* assim, ao passar o mouse, vai ficar azul e aumenta um pouco (usei scale) */
+
+.servicos .card h3 {
+    font-weight: bold;
+}
+
+.servicos .card p {
+    font-size: .8rem;
+    color: grey;
+    text-align: center;
+}
+
+.servicos .card .card-content {
+    height: 180px;
+    text-align: center;
+    /* tivemos que criar essa div para deixar o texto alinhado independente do texto */
+}
+
+
+/* alterar a cor do botão do card content */
+
+.servicos button {
+    background: #1D61DD;
+}
+
+.contato {
+    padding: 60px;
+    background: #f6f8fd;
+    position: relative;
+}
+
+.contato .contato-card {
+    width: 350px;
+    height: 300px;
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+    position: absolute;
+    z-index: 99;
+
+    top: calc(57% - 150px);
+    left: calc(20% - 175px);
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.356);
+    text-decoration: none;
+}
+
+.contato .contato-card h1 {
+    padding-left: 50px;
+    text-align: left;
+}
+
+.contato .contato-card li {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: grey;
+
+    display: flex;
+    align-items: center;
+}
+
+.contato .contato-card li a {
+    text-decoration: none;
+    color: grey;
+}
+
+.contato .contato-card li svg {
+    width: 16px;
+    margin: 10px;
+}
+
+/* Set the size of the div element that contains the map */
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
+#map .responsive-iframe {
+    width:876px;
+    height: 400px;
+}
+
+.contato {
+    padding: 60px 20%;
+}
+
+
+.footer-left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: #f6f8fd;
+}
+
+.footer-left .card h1 {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 40px;
+}
+
+.footer-left .card li {
+    font-size: 12px;
+    text-align: justify;
+}
+
+.footer-left .card .card-payment {
+    display: flex;
+}
+
+.footer-left .card .footer-button {
+
+    width:192px;
+    height:40px;
+    border-width:1px;
+    color:rgba(2, 2, 2, 1);
+    border-color:rgba(12, 12, 12, 0.774);
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    text-shadow:inset 0px 1px 0px #ffffff;
+    background:#f9f9f9;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+
+.footer-left .card .footer-button:hover {
+    background: rgba(235, 235, 235, 1)
+}
+
+.visa {
+    padding: 0.2em 0.5em;
+}
+
+.master {
+    padding: 0.2em 0.5em;
+}
+
+.elo {
+    padding: 0.2em 0.5em;
+}
+
+.amex {
+    padding: 0.2em 0.5em;
+}
+
+
+
+/* RESPONSIVIDADE */
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 2000px) {
+    header nav {
+        margin: 0 5rem 0 2rem;
+    }
+
+}
+
+@media (max-width: 1010px) {
+    .footer-left {
+        position: static;
+        margin: auto;
+    }
+}
+
+/* Especial para mapa */
+@media (max-width: 950px) {
+    .contato {
+        padding: 60px 0;
+    }
+
+    .contato .contato-card {
+        left: 40px;
+    }
+}
+
+/* Especial para mapa */
+@media (max-width: 800px) {
+    .contato {
+        padding: 20px 0;
+    }
+
+    .contato .contato-card {
+        position: static;
+        margin: 40px auto;
+    }
+    .footer-left {
+        position: static;
+        margin: auto;
+    }
+}
+
+/* Landscape TABLETS and down */
+@media (max-width: 767px) {
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    body {
+        margin-bottom: 55px;
+    }
+    header nav ul {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        margin: 0;
+        z-index: 99;
+        background: #1D61DD;
+        color: white;
+        font-weight: bold;
+        height: 55px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header nav p {
+        width: 100%;
+        text-align: center;
+    }
+}
